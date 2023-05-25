@@ -168,3 +168,6 @@ export default Lista;
 
 11. Estilizar componentes
 12. instalação do sass npm install --save-dev sass
+13. importandos estilos definidos para os componentes.
+14. instalandos css-modules configurando ele tsconfig.json "plugins": [{ "name": "typescript-plugin-css-modules" }]
+15. 
