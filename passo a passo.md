@@ -170,4 +170,86 @@ export default Lista;
 12. instalação do sass npm install --save-dev sass
 13. importandos estilos definidos para os componentes.
 14. instalandos css-modules configurando ele tsconfig.json "plugins": [{ "name": "typescript-plugin-css-modules" }]
-15. 
+15. exemplo de como os arquivos estão sendo importados:
+```js
+import React from 'react';
+import Formulario from '../components/Formulario';
+import Lista from '../components/Lista';
+import style from './style.module.scss';
+
+function App() {
+    return (
+        <div className={style.AppStyle}>
+            <Formulario />
+            <Lista />
+        </div>
+    );
+}
+
+export default App;
+```
+16. props definindo o parametro que vao receber 
+```js
+class Botao extends React.Component<{texto:string}> {
+    render() {
+        return (
+            <button className={style.botao}>
+             {this.props.children}
+            </button>
+        )
+    }
+}
+```
+17. exemplo adicionando a props
+```js
+    <Botao
+      texto="Adicionar"              
+    />
+```
+
+18. Desestruturando o item para exibição.
+```js
+    {tarefas.map((item, index) => (
+        <Item
+        {...item}                    
+        />
+    ))}   
+```
+
+19. Construindo o Cronometro.
+20. usar um fragmentador:
+```js
+    export function Relogio() {
+        return (
+            <>
+            <span>0</span>
+            <span>0</span>
+            <span>:</span>
+            <span>0</span>
+            <span>0</span>
+            </>
+        )
+    }
+```
+21. Introduzindo estados.
+```js
+   function Lista() {
+    const [tarefas, setTarefas] = useState([{
+        tarefa: 'React',
+        tempo: '02:00:00'
+    }, {
+        tarefa: 'Javascript',
+        tempo: '01:00:00'
+    }, {
+        tarefa: 'Typescript',
+        tempo: '03:00:00'
+    }])
+```
+22. Usando estrutura com mudança de estado com arrow function.
+```js
+ <h2 onClick={() => {                
+                setTarefas([...tarefas, { tarefa: "Estudar estado", tempo: "05:00:00" }])
+                
+}}
+
+```
