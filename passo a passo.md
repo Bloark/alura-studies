@@ -1,10 +1,10 @@
 # Passo a Passo (Projeto React)
 
-
 1. npx create-react-app --template typescript alura-studies --use-npm
 2. dentro da pasta npm start
 3. Criando um componente
 4. criado uma pasta components\Botao\index.tsx
+
 ```js
 import React from 'react';
 class Botao extends React.Component {
@@ -18,7 +18,9 @@ class Botao extends React.Component {
 }
 export default Botao;
 ```
+
 5. Importando dentro do App.tsx
+
 ```js
 import React from 'react';
 import Botao from './components/Botao'
@@ -33,6 +35,7 @@ function App() {
 
 export default App;
 ```
+
 6. Criando o formulário dentro da pasta component\Formulario\index.tsx
 
 ```js
@@ -77,6 +80,91 @@ class Formulario extends React.Component{
 
 export default Formulario;
 ```
+
 7. depois importar dentro do App.tsx
+8. Criando uma lista atraves do function Component
+
+```js
+import React from 'react';
+function Lista() {
+    return (
+        <aside>
+            <h2>Estudos do dia</h2>
+            <ul>
+                <li>
+                    <h3>
+                        React
+                    </h3>
+                    <span>
+                        02:00:00
+                    </span>
+                </li>
+                <li>
+                    <h3>
+                        JavaScript
+                    </h3>
+                    <span>
+                        01:00:00
+                    </span>
+                </li>
+            </ul>            
+       </aside>
+    ) 
+}
+export default Lista;
+```
+
+9. importar no App.tsx
+
+```js
+import React from 'react';
+import Formulario from './components/Formulario';
+import Lista from './components/Lista'
 
 
+function App() {
+  return (
+    <div className="App">
+      <Formulario />
+      <Lista />
+    </div>
+  );
+}
+
+export default App;
+```
+
+10. Renderizando um array
+
+```js
+import React from 'react';
+function Lista() {
+    const tarefas = [{
+        tarefa: 'React',
+        tempo: '02:00:00'
+    }, {
+        tarefa: 'Javascript',
+        tempo: '01:00:00'
+        }, {
+        tarefa: 'Typescript',
+        tempo: '03:00:00'
+    }]
+    return (
+        <aside>
+            <h2>Estudos do dia</h2>
+            <ul>
+                {tarefas.map((item, index) => (
+                    <li key={index}>
+                        <h3> {item.tarefa} </h3>
+                        <span> {item.tempo} </span>
+                    </li>
+                ))}                
+            </ul>            
+       </aside>
+    ) 
+}
+export default Lista;
+```
+
+11. Estilizar componentes
+12. instalação do sass npm install --save-dev sass
