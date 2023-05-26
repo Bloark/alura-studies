@@ -267,3 +267,4 @@ class Botao extends React.Component<{texto:string}> {
 25. instalara o npm i uuid para controlara os id's
 26. instalara npm i --save-dev @types/uuid
 27. selecionando uma tarefa
+28. Mostrando tarefa selecionada.
