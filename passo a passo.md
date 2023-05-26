@@ -268,3 +268,4 @@ class Botao extends React.Component<{texto:string}> {
 26. instalara npm i --save-dev @types/uuid
 27. selecionando uma tarefa
 28. Mostrando tarefa selecionada.
+29. tempo para segundos.
