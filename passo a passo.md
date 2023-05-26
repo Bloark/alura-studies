@@ -273,4 +273,5 @@ class Botao extends React.Component<{texto:string}> {
 31. Observando mudanças
 32. Mostrando no relógio o valor selecionado.
 33. Adicionado parametro no tsconfig.json  "downlevelIteration": true
-35. Regressiva 
+35. Implementando contagem regressiva
+36. Finalizando tarefas 
