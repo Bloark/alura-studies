@@ -171,6 +171,7 @@ export default Lista;
 13. importandos estilos definidos para os componentes.
 14. instalandos css-modules configurando ele tsconfig.json "plugins": [{ "name": "typescript-plugin-css-modules" }]
 15. exemplo de como os arquivos estão sendo importados:
+
 ```js
 import React from 'react';
 import Formulario from '../components/Formulario';
@@ -188,7 +189,9 @@ function App() {
 
 export default App;
 ```
-16. props definindo o parametro que vao receber 
+
+16. props definindo o parametro que vao receber
+
 ```js
 class Botao extends React.Component<{texto:string}> {
     render() {
@@ -200,7 +203,9 @@ class Botao extends React.Component<{texto:string}> {
     }
 }
 ```
+
 17. exemplo adicionando a props
+
 ```js
     <Botao
       texto="Adicionar"              
@@ -208,6 +213,7 @@ class Botao extends React.Component<{texto:string}> {
 ```
 
 18. Desestruturando o item para exibição.
+
 ```js
     {tarefas.map((item, index) => (
         <Item
@@ -218,6 +224,7 @@ class Botao extends React.Component<{texto:string}> {
 
 19. Construindo o Cronometro.
 20. usar um fragmentador:
+
 ```js
     export function Relogio() {
         return (
@@ -231,7 +238,9 @@ class Botao extends React.Component<{texto:string}> {
         )
     }
 ```
+
 21. Introduzindo estados.
+
 ```js
    function Lista() {
     const [tarefas, setTarefas] = useState([{
@@ -245,11 +254,12 @@ class Botao extends React.Component<{texto:string}> {
         tempo: '03:00:00'
     }])
 ```
+
 22. Usando estrutura com mudança de estado com arrow function.
 ```js
  <h2 onClick={() => {                
                 setTarefas([...tarefas, { tarefa: "Estudar estado", tempo: "05:00:00" }])
                 
 }}
-
 ```
+23. controlando formulario
