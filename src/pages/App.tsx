@@ -6,7 +6,8 @@ import style from './App.module.scss';
 import { ITarefa } from '../types/tarefa';
 
 function App() {
-    const [tarefas, setTarefas] = useState<ITarefa[]>([]);
+  const [tarefas, setTarefas] = useState<ITarefa[]>([]);
+  const [selecionado, setSelecionado] = useState<ITarefa>();
   return (
     <div className={style.AppStyle}>
       <Formulario setTarefas={setTarefas} />

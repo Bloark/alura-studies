@@ -263,3 +263,7 @@ class Botao extends React.Component<{texto:string}> {
 }}
 ```
 23. controlando formulario
+24. Atualizando tarefas dentro do formulário.
+25. instalara o npm i uuid para controlara os id's
+26. instalara npm i --save-dev @types/uuid
+27. selecionando uma tarefa
