@@ -272,3 +272,5 @@ class Botao extends React.Component<{texto:string}> {
 30. Começando a contruir o cronometro.
 31. Observando mudanças
 32. Mostrando no relógio o valor selecionado.
+33. Adicionado parametro no tsconfig.json  "downlevelIteration": true
+35. Regressiva 

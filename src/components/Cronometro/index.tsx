@@ -14,16 +14,26 @@ export default function Cronometro({ selecionado }: Props) {
 
     useEffect(() => {
         if (selecionado?.tempo) {
-            setTempo(tempoParaSegundos(String (selecionado.tempo)))           
-       }
-    }, [selecionado])    
+            setTempo(tempoParaSegundos(String(selecionado.tempo)))
+        }
+    }, [selecionado]);
+
+    function regressiva(contador: number =0) {
+        setTimeout(() => {
+            if (contador > 0) {
+                setTempo(contador - 1);
+                return regressiva(contador - 1)
+            }
+        },1000)
+    }
+
     return (
         <div className={style.cronometro}>
             <p className={style.titulo}>Escolha um Card e inicie o cronômetro</p>
             <div className={style.relogioWrapper}>
                 <Relogio tempo={tempo} />
             </div>
-            <Botao>
+            <Botao onClick={() => regressiva(tempo)}>
               Começar!
             </Botao>
         </div>
