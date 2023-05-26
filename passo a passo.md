@@ -270,3 +270,4 @@ class Botao extends React.Component<{texto:string}> {
 28. Mostrando tarefa selecionada.
 29. tempo para segundos.
 30. Começando a contruir o cronometro.
+31. Observando mudanças
